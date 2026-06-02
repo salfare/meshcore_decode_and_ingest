@@ -128,6 +128,12 @@ sudo systemctl restart get_meshcore_from_mqtt
 sudo systemctl status  get_meshcore_from_mqtt
 ```
 
+Logs are tagged `get_meshcore_from_mqtt` in journald (via `SyslogIdentifier`):
+
+```bash
+sudo journalctl -u get_meshcore_from_mqtt -f
+```
+
 Unit file (`/etc/systemd/system/get_meshcore_from_mqtt.service`):
 
 ```ini
@@ -141,6 +147,7 @@ WorkingDirectory=<repo>
 Type=simple
 User=root
 Group=root
+SyslogIdentifier=get_meshcore_from_mqtt
 ExecStart=<repo>/venv/bin/python <repo>/get_meshcore_from_mqtt.py
 Restart=on-failure
 RestartSec=5
