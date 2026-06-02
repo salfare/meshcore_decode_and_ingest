@@ -203,3 +203,9 @@ See `requirements.txt`. Key packages:
 - `python-dotenv` — `.env` loading
 - `meshcoredecoder` — MeshCore packet decoder
 - `cryptography` / `pycryptodome` — AES decryption
+
+---
+
+## Credits
+
+Packet decoding powered by the **meshcoredecoder** library by [chrisdavis2110](https://github.com/chrisdavis2110/meshcore-decoder-py).

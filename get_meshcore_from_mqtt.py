@@ -6,10 +6,9 @@ Subscribes to `meshcore/packets/#`, decodes each raw LoRa packet with the
 meshcoredecoder library, resolves transport-codes → regions and GroupText
 channel secrets, then inserts one row per packet into the MySQL `packets` table.
 
-All secrets and endpoints are read from the `.env` file in the project root.
-See `new_get_meshcore_from_mqtt.md` for configuration details and the systemd
-unit file.
-packet decoding based on : https://github.com/chrisdavis2110/meshcore-decoder-py
+All secrets and endpoints are read from the `.env` file in the repo directory.
+Packet decoding powered by the meshcoredecoder library by chrisdavis2110:
+https://github.com/chrisdavis2110/meshcore-decoder-py
 
 """
 
